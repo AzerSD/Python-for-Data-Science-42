@@ -8,7 +8,7 @@ def ft_load(path: str) -> np.ndarray:
         if not path.endswith(('.jpg', '.jpeg')):
             raise ValueError("Unsupported file format.")
         with Image.open(path) as img:
-            print(f"The shape of image is: {img.size[1]},{img.size[0]}, \
+            print(f"{img.size[1]},{img.size[0]}, \
 {img.layers}")
             img_array = np.array(img)
             return img_array
